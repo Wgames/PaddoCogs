@@ -83,6 +83,7 @@ class CustomRoles:
         else:
             message = 'There is no such role on this server'
         #await self.bot.say(message)
+        await self.bot.delete_message(context.message)
 
     @_role.command(pass_context=True, no_pm=True, name='relieve')
     async def _relieve(self, context, *role_name):
